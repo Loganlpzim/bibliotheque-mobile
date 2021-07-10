@@ -1,23 +1,15 @@
-import React, { Component, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Alert} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Button, TextInput, View} from 'react-native';
 
-export default function LibraryScreen(route) {
-    const [count, setCount] = useState(0)
-    function callMe() {
-        console.log("Coucou");
-        setCount(count + 1)
-    }
-    return (
-      <View style={styles.container}>
-          <Text>Bonjour toi</Text>
-          <TouchableOpacity onPress={callMe}>
-              <View>
-                  <Text>Clique ici {count}</Text>
-              </View>
-          </TouchableOpacity>
-      </View>
-    );
-}
+
+export default function LibraryScreen(navigation) {
+
+        return (
+            <View>
+            <TextInput placeholder="Entrer le titre d'un livre"></TextInput>
+            <Button title="Rechercher"></Button>
+            </View>
+        )}
 
 const styles = StyleSheet.create({
     container: {
@@ -27,4 +19,5 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     }
   });
+  
   

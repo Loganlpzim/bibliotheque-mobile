@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Image, FlatList} from 'react-native';
-
-
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, Image, } from 'react-native';
 
 export default function SplashScreen({navigation}) {
-    function goToLibrary() {
-        console.log("hello");
-        navigation.navigate('Mes livres');
-    }
-    function goToBookScreen() {
-      console.log("hello");
-      navigation.navigate("Détails d'un livre");
+  function goToLibrary() {
+    navigation.navigate("Mes livres");
   }
+
   return (
     <View style={styles.container}>
-      <Image style={styles.splashImg} source={require('../img/splashimg.png')}></Image>
+      <Image style={styles.splashImg} source={require('../assets/img/splashimg.png')}></Image>
       <Text style={styles.splashText}>Book'App</Text>
 
     <TouchableOpacity onPress={goToLibrary}>
@@ -47,8 +41,8 @@ const styles = StyleSheet.create({
     marginTop: 100,
   },
   splashImg: {
-    width: 150,
-    height: 150,
+    width: 250,
+    height: 250,
     marginBottom: 20,
   }
 });
