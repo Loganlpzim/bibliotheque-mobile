@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     content: {
       display: 'flex',
       flexDirection: 'row',
+      maxHeight: 150,
     },
     img: {
         width: 50,
@@ -83,6 +84,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
+        width: 250,
         maxWidth: 250,
     }
   });
