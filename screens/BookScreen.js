@@ -5,7 +5,7 @@ export default function BookScreen({route}) {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Image style={styles.image} source={route.params.img}/>
+                <Image style={styles.image} source={{uri: route.params.img}}/>
             <View style={styles.container}>
                 <Text style={styles.title}>{route.params.titre}</Text>
                 <Text style={styles.description}>{route.params.description}</Text>
@@ -20,23 +20,25 @@ export default function BookScreen({route}) {
 const styles = StyleSheet.create({
     container: {
       backgroundColor: 'darkkhaki',
+      height: '100%'
     },
     image: {
-        margin: 'auto',
+        marginLeft: 60,
         marginTop: 20,
         marginBottom: 20,
         width: 250,
-        height: 200
+        height: 200,
+        maxWidth: 250
     },
     title: {
-        margin: 'auto',
+        marginLeft: 40,
         fontSize: 18 ,
         fontWeight: 'bold'
     },
     publishedDate: {
         fontSize: 12,
         fontWeight: 'bold',
-        margin: 'auto',
+        marginLeft: 10,
         marginBottom: 20,
     },
     description: {
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
     author: {
         fontSize: 14,
         fontWeight: 'bold',
-        margin: 'auto',
+        marginLeft: 10,
         marginTop: 20,
         marginBottom: 20,
     }
